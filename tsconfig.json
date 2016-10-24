@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": false,
+        "outDir": "scripts"
+    },
+    "files": [
+        "ts/setupRevealJs.ts",
+        "ts/render.ts",
+        "ts/main.ts"
+    ]
+}

@@ -1,19 +1,22 @@
-declare var $;
-declare function setupRevealJs();
+declare var $: any;
+//declare function setupRevealJs();
 
-class render {
+import {setupRevealJs} from "./setupRevealJs"
+
+export class Render {
     constructor(filename: string) {
         $.ajax(filename, {
             success: function(markdown) {
-                markdown = render.removeHidden(markdown);
+                markdown = Render.removeHidden(markdown);
 
-                var sections = render.parseMarkdown(markdown);
+                var sections = Render.parseMarkdown(markdown);
 
-                render.fillSections(sections);
+                Render.fillSections(sections);
 
                 setupRevealJs();
 
                 console.log('?!');
+
                 setTimeout(function() {
                     $('#loading').remove();
                 }, 3000);
@@ -90,7 +93,7 @@ class render {
         var sections = [];
 
         sectionsStrings.forEach(function(sectionString) {
-            var slides = render.sectionStringToSlides(sectionString);
+            var slides = Render.sectionStringToSlides(sectionString);
     
             sections.push({
                 slides: slides
