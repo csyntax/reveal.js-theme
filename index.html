@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to Programming</title>
+		
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		
+
+		<link rel="stylesheet" href="./reveal.js/css/reveal.css" />
+		<link rel="stylesheet" href="./reveal.js/css/theme/black.css" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+
+		<script src="./reveal.js/lib/js/head.min.js"></script>
+		<script src="./reveal.js/js/reveal.js"></script>
+		<script src="./scripts/libs/jquery.min.js"></script>
+		<script src="./scripts/main.js"></script>
+		<script src="./scripts/setup-func.js"></script>
+		<script src="./scripts/render.js"></script>
+
+		<link rel="stylesheet" href="./styles/main.css" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div id="slides-container" class="slides"></div>
+		</div>
+		<script>
+			(function () {
+				"use strict";
+
+				var protocol = window.location.protocol;
+				var pathname = window.location.pathname.replace(/index\.html$/, '');
+				var host = window.location.host;
+				var readmeLocation = protocol + "//" + host + pathname;
+				
+				if (readmeLocation[readmeLocation.length - 1] !== '/') {
+					readmeLocation += '/';
+				}
+
+				readmeLocation += 'README.md';
+				new render(readmeLocation);
+			})();
+		</script>
+	</body>
+</html>

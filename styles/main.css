@@ -1,0 +1,71 @@
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.9) url(../images/loading-gears.gif);
+    color: white;
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+}
+
+#loading .loading-container {
+    position: absolute;
+    top: 48%;
+}
+#loading div {
+    height: 100%;
+    width: 100%;
+}
+
+.reveal p {
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+#loading .text {
+    font-size: 1em;
+    line-height: 7em;
+    text-align: center;
+}
+
+.reveal .social-widget.left {
+    left: 0;
+    border-radius: 0 5px 0 0;
+}
+
+.reveal .social-widget {
+    position: absolute;
+    bottom: 0;
+    padding-left: 15px;
+    padding-bottom: 18px;
+    padding-right: 15px;
+    background-color: rgba(200,200,200,0.4);
+    opacity: 0.3;
+    z-index: 100;
+    text-align: center;
+    border-radius: 5px 0 0 0;
+}
+
+.reveal .social-widget strong {
+    font-size: 0.5em;
+    margin-bottom: 5px;
+}
+
+.reveal strong, 
+.reveal b {
+    font-weight: bold;
+}
+
+.hidden {
+	display: none;
+}
+
+@media screen and (max-width: 500px) {
+	.reveal .social-widget {
+		display: none;
+	}
+}
