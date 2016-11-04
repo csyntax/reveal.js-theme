@@ -1,3 +1,52 @@
+body {
+	background: rgb(30, 30, 29) url("/images/background.png") repeat-y center top;
+    background-attachment: fixed;
+	background-size: 100%;
+	color: white;
+	font-family: Arial, sans-serif;
+}
+
+.reveal ol, 
+.reveal dl, 
+.reveal ul {
+    display: inline-block;
+    text-align: justify;
+    margin: 0;
+}
+
+#slides-container {
+	width: 1000px !important;
+    height: 700px important;
+}
+
+@media screen and (min-width: 480px){
+	body {
+		background-size: 55%;
+	}
+}
+
+.reveal .slides > section {
+	padding: 0;
+}
+
+.reveal .slides {
+	margin: 0;
+    width: 1000px;
+    height: 700px;
+}
+
+.reveal h1 {
+    margin: 0;
+    color: white;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-shadow: none;
+    word-wrap: break-word;
+}
+
 #loading {
     display: block;
     position: absolute;
@@ -55,7 +104,7 @@
     margin-bottom: 5px;
 }
 
-.reveal strong, 
+.reveal strong,
 .reveal b {
     font-weight: bold;
 }

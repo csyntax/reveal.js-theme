@@ -1,15 +1,58 @@
 function render(filename) {
 	$.ajax(filename, {
-  		success: function(markdown) {
+  		success: function (markdown) {
 			markdown = removeHidden(markdown);
 
 			var sections = parseMarkdown(markdown);
 
 			fillSections(sections);
 
-			setupRevealJs();
+			//setupRevealJs();
 
-			console.log('?!');
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: 'c / t',
+				transition: 'slide',
+				dependencies: [
+		            {
+		                src: './reveal.js/lib/js/classList.js',
+		                condition: function() {
+		                    return !document.body.classList;
+		                }
+		            },
+		            {
+		                src: './reveal.js/plugin/markdown/marked.js',
+		                condition: function() {
+		                    return !!document.querySelector('[data-markdown]');
+		                }
+		            },
+		            {
+		                src: './reveal.js/plugin/markdown/markdown.js',
+		                condition: function() {
+		                    return !!document.querySelector('[data-markdown]');
+		                }
+		            },
+		            {
+		                src: './reveal.js/plugin/highlight/highlight.js',
+		                //async: true,
+		                callback: function() {
+		                    hljs.initHighlightingOnLoad();
+		                }
+		            },
+		            {
+		                src: './reveal.js/plugin/zoom-js/zoom.js',
+		                //async: true
+		            },
+		            {
+		                src: './reveal.js/plugin/notes/notes.js',
+		                //async: true
+		            }
+		        ]
+			});
+
 			setTimeout(function() {
 		  		$('#loading').remove();
 			}, 3000);
@@ -25,9 +68,9 @@ function removeHidden(markdown) {
 
 	markdown = markdown.replace (regex, function(whole, group) {
 		var fixed = group.substring('<!--'.length);
-	  
+
 	  	fixed = fixed.substring(0, fixed.length - '-->'.length);
-	  
+
 	  	return whole.replace(group, fixed).trim();
 	});
 
@@ -37,7 +80,7 @@ function removeHidden(markdown) {
 		if (g3 && g3.toLowerCase() === 'true') {
 			return g1.replace('<!--', '').replace('-->', '').trim();
 	  	}
-	  	
+
 		return g1;
 	});
 
@@ -47,7 +90,7 @@ function removeHidden(markdown) {
 		if (g3.indexOf('/') < 0) {
 			g3 = '/' + g3;
 		}
-	  		
+
 		return g2 + g3 + g4;
 	});
 
@@ -58,26 +101,26 @@ function sectionStringToSlides(sectionString) {
 	var lines = sectionString.split("\n");
   	var slides = [];
   	var slide = "";
-		
+
 	lines.forEach(function(line) {
   		var trimmedLine = line.trim();
-  		
+
 		if (trimmedLine.indexOf("# ") === 0 || trimmedLine.indexOf("#\t") === 0 || trimmedLine.indexOf("attr:") >= 0) {
 			if (slide.trim() !== '') {
 	  			slides.push(slide);
 			}
-				
+
 			slide = '';
 	  	}
-	  
+
 	  	slide += line;
 	  	slide += "\n";
 	});
-	
+
 	if (slide.trim() !== '') {
 		slides.push(slide);
 	}
-		
+
 	return slides;
 }
 
@@ -87,20 +130,20 @@ function parseMarkdown(markdown) {
 
 	sectionsStrings.forEach(function(sectionString) {
   		var slides = sectionStringToSlides(sectionString);
-  
+
   		sections.push({
 			slides: slides
   		});
 	});
-	
+
 	return sections;
 }
 
 function fillSections(sections) {
 	var $sectionsContainer = $("<div/>");
-		
+
 	sections.forEach(function(section, index) {
-	  
+
 	  	if (!section.slides || !section.slides.length || section.slides.every(function (slide) {
 			return slide.trim() === "";
 		})) {
@@ -109,7 +152,7 @@ function fillSections(sections) {
 
 	  	var $masterSection = $("<section />").appendTo($sectionsContainer);
 	  	var attr = {};
-	  	
+
         section.slides.forEach(function (slide) {
             slide = slide.trim();
 

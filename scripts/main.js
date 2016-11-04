@@ -14,7 +14,7 @@ $(function() {
             <strong>Follow me</strong>
             <br/>
             <a href="https://www.facebook.com/csyntaxbg">
-                <img title="Follow us"  src="../images/facebook.png" />
+                <img src="../images/facebook.png" />
             </a>
         </div>
     `);

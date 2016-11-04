@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
 		<title>RevealJS theme</title>
-		
+
 		<link rel="stylesheet" href="./reveal.js/css/reveal.css" />
 		<link rel="stylesheet" href="./reveal.js/css/theme/black.css" />
 
@@ -19,8 +19,10 @@
 		<script src="./reveal.js/js/reveal.js"></script>
 		<script src="./scripts/libs/jquery.min.js"></script>
 		<script src="./scripts/main.js"></script>
-		<script src="./scripts/setup-func.js"></script>
+		<!--<script src="./scripts/setupReveal.js"></script>-->
 		<script src="./scripts/render.js"></script>
+
+		<script src="./scripts/libs/system.js"></script>
 
 		<link rel="stylesheet" href="./styles/main.css" />
 	</head>
@@ -36,13 +38,13 @@
 				var pathname = window.location.pathname.replace(/index\.html$/, '');
 				var host = window.location.host;
 				var readmeLocation = protocol + "//" + host + pathname;
-				
+
 				if (readmeLocation[readmeLocation.length - 1] !== '/') {
 					readmeLocation += '/';
 				}
 
 				readmeLocation += 'README.md';
-				
+
 				new render(readmeLocation);
 			})();
 		</script>
