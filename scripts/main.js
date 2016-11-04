@@ -9,7 +9,7 @@ $(function() {
         </div>
     `);
 
-    $(".reveal").append(`
+   /* $(".reveal").append(`
         <div class="social-widget left desk">
             <strong>Follow me</strong>
             <br/>
@@ -17,5 +17,5 @@ $(function() {
                 <img src="../images/facebook.png" />
             </a>
         </div>
-    `);
+    `);*/
 });

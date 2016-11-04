@@ -1,5 +1,5 @@
 body {
-	background: rgb(30, 30, 29) url("/images/background.png") repeat-y center top;
+	background: rgb(30, 30, 29) url("https://raw.githubusercontent.com/csyntax/reveal.js-theme/master//images/background.png") repeat-y center top;
     background-attachment: fixed;
 	background-size: 100%;
 	color: white;
@@ -55,7 +55,7 @@ body {
     z-index: 100;
     width: 100%;
     height: 100%;
-    background: rgba(30, 30, 30, 0.9) url(../images/loading-gears.gif);
+    background: rgba(30, 30, 30, 0.9) url("http://rawgit.com/csyntax/reveal.js-theme/master/images/loading-gears.gif");
     color: white;
     background-repeat: no-repeat;
     background-position: 50% 40%;
