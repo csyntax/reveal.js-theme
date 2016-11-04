@@ -24,30 +24,30 @@ function render(filename) {
 		                }
 		            },
 		            {
-		                src: "https://raw.githubusercontent.com/csyntax/reveal.js-theme/master/reveal.js/plugin/markdown/marked.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/markdown/marked.js",
 		                condition: function () {
 		                    return !!document.querySelector("[data-markdown]");
 		                }
 		            },
 		            {
-		                src: "https://raw.githubusercontent.com/csyntax/reveal.js-theme/master/reveal.js/plugin/markdown/markdown.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/markdown/markdown.js",
 		                condition: function () {
 		                    return !!document.querySelector("[data-markdown]");
 		                }
 		            },
 		            {
-		                src: "https://raw.githubusercontent.com/csyntax/reveal.js-theme/master/reveal.js/plugin/highlight/highlight.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/highlight/highlight.js",
 		                async: true,
 		                callback: function() {
 		                    hljs.initHighlightingOnLoad();
 		                }
 		            },
 		            {
-		                src: "https://raw.githubusercontent.com/csyntax/reveal.js-theme/master/reveal.js/plugin/zoom-js/zoom.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/zoom-js/zoom.js",
 		                async: true
 		            },
 		            {
-		                src: "https://raw.githubusercontent.com/csyntax/reveal.js-theme/master/reveal.js/plugin/notes/notes.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/notes/notes.js",
 		                async: true
 		            }
 		        ]
