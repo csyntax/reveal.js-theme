@@ -7,9 +7,8 @@ function render(filename) {
 
 			fillSections(sections);
 
-			//setupRevealJs();
-
 			Reveal.initialize({
+				width: window.innerWidth,
 				controls: true,
 				progress: true,
 				history: true,
@@ -54,7 +53,7 @@ function render(filename) {
 			});
 
 			setTimeout(function () {
-		  		$('#loading').remove();
+		  		$("#loading").remove();
 			}, 3000);
 	  	},
 	  	error: function(err) {
