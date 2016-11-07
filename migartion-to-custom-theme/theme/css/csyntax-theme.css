@@ -4,14 +4,6 @@
   font-weight: normal;
   color: white;
 }
-.reveal .slides > section,
-.reveal .slides > section > section {
-  line-height: 1.3;
-  font-weight: inherit;
-}
-/*********************************************
- * HEADERS
- *********************************************/
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -19,8 +11,8 @@
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  color: white;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -40,17 +32,10 @@
 .reveal h4 {
   font-size: 1em;
 }
-.reveal h1 {
-  text-shadow: none;
-}
-/*********************************************
- * OTHER
- *********************************************/
 .reveal p {
   margin: 20px 0;
   line-height: 1.3;
 }
-/* Ensure certain elements are never larger than the slide itself */
 .reveal img,
 .reveal video,
 .reveal iframe {
@@ -61,6 +46,17 @@
 .reveal b {
   font-weight: bold;
 }
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit;
+}
+/*********************************************
+ * HEADERS
+ *********************************************/
+/*********************************************
+ * OTHER
+ *********************************************/
 .reveal em {
   font-style: italic;
 }

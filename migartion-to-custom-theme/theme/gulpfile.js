@@ -5,7 +5,7 @@ var watch = require("gulp-watch");
 var server = require("gulp-server-livereload");
 
 gulp.task("less", function () {
-	return gulp.src("./less/**/*.less")
+	return gulp.src("./less/*.less")
 		.pipe(less())
 		.pipe(gulp.dest("./css"))
 });

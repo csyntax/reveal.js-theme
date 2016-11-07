@@ -10,6 +10,13 @@ function setupRevealJs() {
     slideNumber: 'c / t',
     transition: 'slide', // none/fade/slide/convex/concave/zoom
     // Optional reveal.js plugins
+    transition: 'default', // none/fade/slide/convex/concave/zoom
+
+// Transition speed
+transitionSpeed: 'slow', // default/fast/slow
+
+// Transition style for full page slide backgrounds
+backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
     dependencies: [{
       src: 'https://rawgit.com/TelerikAcademy/Common/master/revealjs-theme/lib/js/classList.js',
       condition: function() {

@@ -50,6 +50,9 @@ var render = (function() {
     if (slide.trim() !== '') {
       slides.push(slide);
     }
+
+    console.log(slides);
+
     return slides;
   }
 
