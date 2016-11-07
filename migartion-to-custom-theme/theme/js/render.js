@@ -7,6 +7,8 @@ function render(filename) {
 
 			fillSections(sections);
 
+			var dependencies = [];
+
 			Reveal.initialize({
 				controls: true,
 				progress: true,
@@ -19,30 +21,30 @@ function render(filename) {
 				backgroundTransition: "slide",
 				dependencies: [
 		            {
-		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/lib/js/classList.js",
+		                src: "./js/plugins/classList.js",
 		                condition: function () {
 		                    return !document.body.classList;
 		                }
 		            },
 		            {
-		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/markdown/marked.js",
+		                src: "./js/plugins/marked.js",
 		                condition: function () {
 		                    return !!document.querySelector("[data-markdown]");
 		                }
 		            },
 		            {
-		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/markdown/markdown.js",
+		                src: "./js/plugins/markdown.js",
 		                condition: function () {
 		                    return !!document.querySelector("[data-markdown]");
 		                }
 		            },
 		            {
-		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/highlight/highlight.js",
-		                async: true,
+		                src: "./js/plugins/highlight.js",
+		                //async: true,
 		                callback: function() {
 		                    hljs.initHighlightingOnLoad();
 		                }
-		            },
+		            }/*,
 		            {
 		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/zoom-js/zoom.js",
 		                async: true
@@ -50,7 +52,7 @@ function render(filename) {
 		            {
 		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/notes/notes.js",
 		                async: true
-		            }
+		            }*/
 		        ]
 			});
 

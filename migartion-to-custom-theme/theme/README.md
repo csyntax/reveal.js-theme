@@ -3,9 +3,9 @@
 # .NET Compiler Platform
 ## What is Roslyn and how can we use it?
 <div class="signature">
-    <p class="signature-course">Ivan Ivanov</p>
-    <p class="signature-initiative">Junior Web Developer</p>
-    <a href="http://csyntax.net" class="signature-link">csyntax.net</a>
+    <p class="author-name">Ivan Ivanov</p>
+    <p class="author-job-title">Junior Web Developer</p>
+    <a href="http://csyntax.net" class="author-website">csyntax.net</a>
 </div>
 
 <!-- section start -->
