@@ -4,6 +4,15 @@
   font-weight: normal;
   color: white;
 }
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit;
+}
+.reveal .roll span:after {
+  color: #fff;
+  background: #068ee9;
+}
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -46,23 +55,12 @@
 .reveal b {
   font-weight: bold;
 }
-.reveal .slides > section,
-.reveal .slides > section > section {
-  line-height: 1.3;
-  font-weight: inherit;
-}
-/*********************************************
- * HEADERS
- *********************************************/
-/*********************************************
- * OTHER
- *********************************************/
 .reveal em {
   font-style: italic;
 }
+.reveal ul,
 .reveal ol,
-.reveal dl,
-.reveal ul {
+.reveal dl {
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em;
@@ -137,6 +135,18 @@
   background: #3F3F3F;
   color: #DCDCDC;
 }
+.reveal a {
+  color: #42affa;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+}
+.reveal a:hover {
+  color: #8dcffc;
+  text-shadow: none;
+  border: none;
+}
 .reveal table {
   margin: auto;
   border-collapse: collapse;
@@ -177,28 +187,6 @@
 .reveal small * {
   vertical-align: top;
 }
-/*********************************************
- * LINKS
- *********************************************/
-.reveal a {
-  color: #42affa;
-  text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease;
-}
-.reveal a:hover {
-  color: #8dcffc;
-  text-shadow: none;
-  border: none;
-}
-.reveal .roll span:after {
-  color: #fff;
-  background: #068ee9;
-}
-/*********************************************
- * IMAGES
- *********************************************/
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
@@ -215,21 +203,6 @@
   border-color: #42affa;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
-.reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #8dcffc;
-}
-.reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #8dcffc;
-}
-.reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #8dcffc;
-}
-.reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #8dcffc;
-}
-/*********************************************
- * PROGRESS BAR
- *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
 }

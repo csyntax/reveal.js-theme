@@ -3,14 +3,18 @@
 
 ::selection {
 	background: rgba(187, 255, 183, 0.5);
-	color: rgb(33, 130, 20);
+	color: @green;
 }
 
 @import "./includes/controls";
 
 .reveal {
+	// todo, implements this
+}
+
+.reveal {
 	background: #000;
-	background-image: url("http://v4.tylergaw.com/images/content-bg-navy.png");
+	background-image: url(@backround);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 
@@ -53,12 +57,14 @@
 	border: 1px solid #acffa8;
 	border-radius: 5px;
 	width: 85%;
-	background: rgba(255,255,255,0.2);
+	background: rgba(255, 255, 255, 0.2);
 	padding: 5px 15px;
+
+	p {
+		margin: 0 auto;
+	}
 }
-.reveal .slides blockquote p {
-	margin: 0 auto;
-}
+
 
 .reveal .slides .hljs {
 	background: rgba(250, 250, 250, 0.85);
@@ -83,7 +89,7 @@
 }
 .reveal .slides section h1,
 .reveal .slides section h2 {
-	color: rgb(33, 130, 20);
+	color: @green;
 	//text-shadow: 3px 3px 5px #000;
 	width: 85%;
 	margin-left: 15%;
@@ -156,7 +162,7 @@
 	text-align: left;
 }
 .reveal .slides .signature-course {
-	color: rgb(33, 130, 20);
+	color: @green;
 	font-size: 1.05em;
 	font-weight: bold;
 	line-height: 21px;
@@ -169,7 +175,7 @@
 	margin-bottom: 0;
 }
 .reveal .slides .signature-link {
-	color: rgb(33, 130, 20);
+	color: @green;
 	font-size: 0.85em;
 	text-decoration: underline;
 	line-height: 10px;
