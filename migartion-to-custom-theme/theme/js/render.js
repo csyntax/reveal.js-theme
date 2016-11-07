@@ -8,13 +8,15 @@ function render(filename) {
 			fillSections(sections);
 
 			Reveal.initialize({
-				width: window.innerWidth,
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
 				slideNumber: "c / t",
 				transition: "slide",
+				transition: "default",
+				transitionSpeed: "slow",
+				backgroundTransition: "slide",
 				dependencies: [
 		            {
 		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/lib/js/classList.js",
