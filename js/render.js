@@ -21,25 +21,25 @@ function render(filename) {
 				backgroundTransition: "slide",
 				dependencies: [
 		            {
-		                src: "./js/plugins/classList.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/js/plugins/classList.js",
 		                condition: function () {
 		                    return !document.body.classList;
 		                }
 		            },
 		            {
-		                src: "./js/plugins/marked.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/js/plugins/marked.js",
 		                condition: function () {
 		                    return !!document.querySelector("[data-markdown]");
 		                }
 		            },
 		            {
-		                src: "./js/plugins/markdown.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/js/plugins/markdown.js",
 		                condition: function () {
 		                    return !!document.querySelector("[data-markdown]");
 		                }
 		            },
 		            {
-		                src: "./js/plugins/highlight.js",
+		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/js/plugins/highlight.js",
 		                //async: true,
 		                callback: function() {
 		                    hljs.initHighlightingOnLoad();
