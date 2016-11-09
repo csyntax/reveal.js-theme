@@ -77,7 +77,7 @@ function removeHidden(markdown) {
 	  	return whole.replace(group, fixed).trim();
 	});
 
-	var regexImage = /<!--\s*<img.*((?=showInPresentation)showInPresentation=["']([^"']*))["'].*(?=\/)\/>\s*-->/gi;
+	/*var regexImage = /<!--\s*<img.*((?=showInPresentation)showInPresentation=["']([^"']*))["'].*(?=\/)\/>\s*-->/gi;
 
 	markdown = markdown.replace(regexImage, function(g1, g2, g3) {
 		if (g3 && g3.toLowerCase() === "true") {
@@ -85,7 +85,7 @@ function removeHidden(markdown) {
 	  	}
 
 		return g1;
-	});
+	});*/
 
 	var regexLinks = /(\[.*\]\(#)(.*)(\))/gi;
 
@@ -113,7 +113,7 @@ function sectionStringToSlides(sectionString) {
 	  			slides.push(slide);
 			}
 
-			slide = '';
+			slide = "";
 	  	}
 
 	  	slide += line;
@@ -166,7 +166,7 @@ function fillSections(sections) {
 
                 var attrString = slide.substring(fromIndex + "<!-- attr:".length, toIndex + 1);
 
-                eval("attr=" + attrString);
+                eval("attr=" + attrString); // todo
 
                 return;
             }

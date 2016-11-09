@@ -1,20 +1,22 @@
-var path = require("path");
-var gulp = require("gulp");
-var less = require("gulp-less");
-var watch = require("gulp-watch");
-var server = require("gulp-server-livereload");
+const path = require("path");
+const gulp = require("gulp");
+const less = require("gulp-less");
+const watch = require("gulp-watch");
+const server = require("gulp-server-livereload");
 
-gulp.task("less", function () {
+gulp.task("less", () => {
 	return gulp.src("./less/*.less")
-		.pipe(less())
-		.pipe(gulp.dest("./css"))
+		.pipe(less({
+			compress: false
+		}))
+		.pipe(gulp.dest("./css"));
 });
 
-gulp.task("watch", function () {
+gulp.task("watch", () => {
 	gulp.watch("./less/**/*.less", ["less"]);
 });
 
-gulp.task("webserver", function() {
+gulp.task("webserver", () => {
 	gulp.src("./")
 		.pipe(server({
       		livereload: true,
