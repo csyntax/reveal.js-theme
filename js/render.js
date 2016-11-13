@@ -40,19 +40,10 @@ function render(filename) {
 		            },
 		            {
 		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/js/plugins/highlight.js",
-		                //async: true,
 		                callback: function() {
 		                    hljs.initHighlightingOnLoad();
 		                }
-		            }/*,
-		            {
-		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/zoom-js/zoom.js",
-		                async: true
-		            },
-		            {
-		                src: "http://rawgit.com/csyntax/reveal.js-theme/master/reveal.js/plugin/notes/notes.js",
-		                async: true
-		            }*/
+		            }
 		        ]
 			});
 
