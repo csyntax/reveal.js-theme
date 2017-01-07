@@ -1,4 +1,5 @@
-# CSYNTAX REVEAL.JS THEMES
+# CSYNTAX REVEAL.JS THEME
+
 * Styles
 	* `http://rawgit.com/csyntax/reveal.js-theme/master/css/reveal.css`
 	* `http://rawgit.com/csyntax/reveal.js-theme/master/css/visual-studio.css`
